@@ -1,0 +1,52 @@
+/* 轮播标签样式 */
+.cslider_banner{
+    position: relative;
+    overflow: hidden;
+}
+
+.cslider_banner ul {
+    list-style: none; /* 去除ul标签前面的小圆点 */
+    margin: 0px;
+    padding: 0px;
+    position: relative; /* 必须设置,否则left动画无效 */
+}
+/* 滑动item的样式 */
+.cslider_banner ul li {
+    display: block;
+    float: left;
+    /* 宽度为 (100 / li标签的数量) */
+    width: 25%;
+    text-align: center;
+    min-height: 300px;
+}
+/* 分页圆点的布局 */
+.cslider_banner .dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+/* 小圆点 */
+.cslider_banner .dots li{
+    display: inline-block;
+    *display: inline; /* 兼容低版本 */
+
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    margin: 0 4px;
+
+    text-indent: -999em; /* 规定文本缩进 */
+    *text-indent: 0;
+
+    border: 1px solid #fff;/* 定义边框 */
+    border-radius: 7px; /* 定义圆角 */
+    cursor: pointer; /* 定义光标类型 */
+}
+
+/* 当前页的小圆点样式 */
+.cslider_banner .dots li.active {
+    background: #fff;
+}

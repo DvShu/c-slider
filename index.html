@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <!-- 引入c-slider提供的样式,如果不喜欢,可以不用引入自定义样式 -->
+    <link href="style/cslider.css" rel="stylesheet">
+    <!-- 引入jQuery -->
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <!-- 引入轮播插件c-slider.js -->
+    <script src="js/cslider.js"></script>
+    <script>
+        $(function(){
+            /*
+                带所有参数的示例
+                $("#slider1").cslider({
+                    autoplay : false, // 是否开启自动轮播, true为开启自动轮播,默认为false
+                    pause : false, // 鼠标悬浮停止自动轮播,true鼠标悬停时停止自动轮播,默认为true
+                    delay : 3000, // 当autoplay为true时,两张幻灯片的轮播间隔时间,默认为3000
+                    speed : 500 // 切换幻灯片时的速度,默认为500
+                });
+            */
+            $("#slider1").cslider({
+				autoplay:true
+			}); // 最简单的实例
+        });
+    </script>
+</head>
+<body style="margin: 0px; padding: 0px">
+    <!-- 需要轮播的区域,用div框起来,
+        基本结构为：
+           <div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ol class="has-dot">
+                    <li></li>
+                    <li></li>
+                </ol>
+           </div>
+           其中class="has-dot"必须设置否则,点击小圆点后将没有任何效果
+         以下示例的样式都是c-slider插件默认提供的简单的样式,如果不喜欢,可以自己定义其它样式
+     -->
+    <div id="slider1" class="cslider_banner">
+        <!-- 需要轮播的标签 -->
+        <ul id="ul">
+            <li style="background: rosybrown">幻灯片1</li>
+            <li style="background: red">幻灯片2</li>
+            <li style="background: seagreen">幻灯片3</li>
+            <li style="background: blue">幻灯片4</li>
+        </ul>
+        <!-- 分页圆点, -->
+        <ol class="dots has-dot">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+</body>
+</html>
