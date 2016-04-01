@@ -1,3 +1,3 @@
 # c-slider
 ---
-![](https://github.com/ReconcileMySelf/c-slider/raw/master/images/screen1.png)
+![](https://github.com/ReconcileMySelf/c-slider/raw/master/images/screen.png)
